@@ -17,6 +17,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("1_script")
 name = "Viscolor"
+dex_number = 19
 type_1 = &"water"
 evolutions = Array[ExtResource("3_qf88h")]([SubResource("Resource_3qll8")])
 base_hp = 70

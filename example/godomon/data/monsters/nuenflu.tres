@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("2_ipihy")
 name = "Nuenflu"
+dex_number = 43
 type_1 = &"ice"
 type_2 = &"blight"
 base_hp = 60

@@ -18,6 +18,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_6qstg")
 name = "Baoby"
+dex_number = 40
 type_1 = &"plant"
 evolutions = Array[ExtResource("1_si43g")]([SubResource("Resource_knm44")])
 base_hp = 80

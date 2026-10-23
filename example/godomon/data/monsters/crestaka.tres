@@ -14,6 +14,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_pokdu")
 name = "Crestaka"
+dex_number = 14
 type_1 = &"water"
 evolutions = Array[ExtResource("1_akrwv")]([SubResource("Resource_vjd8g")])
 base_hp = 59

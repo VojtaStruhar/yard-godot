@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("6_dowt3")
 name = "Nymfushia"
+dex_number = 39
 type_1 = &"dread"
 type_2 = &"wind"
 base_hp = 68

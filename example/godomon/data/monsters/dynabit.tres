@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("2_1e2ro")
 name = "Dynabit"
+dex_number = 45
 type_1 = &"electric"
 type_2 = &"cosmic"
 base_hp = 85

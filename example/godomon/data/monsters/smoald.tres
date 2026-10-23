@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("1_script")
 name = "Smoald"
+dex_number = 36
 type_1 = &"fire"
 evolutions = Array[ExtResource("3_q23kg")]([SubResource("Resource_yu0dl")])
 base_hp = 60

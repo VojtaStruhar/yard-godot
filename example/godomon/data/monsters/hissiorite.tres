@@ -18,6 +18,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_qr3vn")
 name = "Hissiorite"
+dex_number = 10
 type_1 = &"fire"
 evolutions = Array[ExtResource("1_668oc")]([SubResource("Resource_rog3g")])
 base_hp = 49

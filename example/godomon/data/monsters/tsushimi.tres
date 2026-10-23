@@ -18,6 +18,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_7p64m")
 name = "Tsushimi"
+dex_number = 51
 type_1 = &"water"
 type_2 = &"primal"
 evolutions = Array[ExtResource("1_ftm8p")]([SubResource("Resource_duxuu")])

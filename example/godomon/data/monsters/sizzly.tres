@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("1_script")
 name = "Sizzly"
+dex_number = 6
 type_1 = &"fire"
 type_2 = &"wild"
 base_hp = 90

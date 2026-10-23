@@ -5,7 +5,6 @@
 [resource]
 script = ExtResource("1_o5qsg")
 _version = 2
-_scan_auto = false
 _scan_rulesets = Array[Dictionary]([{
 &"allowed_file_extensions": Array[String]([]),
 &"class_restrictions": Array[StringName]([&"GdmMonster"]),
@@ -121,4 +120,164 @@ _string_ids_to_uids = Dictionary[StringName, StringName]({
 &"tuffettry": &"uid://c06micpr6slh",
 &"umbreeze": &"uid://c3bq4s7ko2q77",
 &"viscolor": &"uid://btj2xnxbxdkn0"
+})
+_property_index = Dictionary[StringName, Dictionary]({
+&"dex_number": {
+1: {
+&"timberry": true
+},
+2: {
+&"howliage": true
+},
+3: {
+&"botanine": true
+},
+4: {
+&"bonfur": true
+},
+5: {
+&"tindursa": true
+},
+6: {
+&"sizzly": true
+},
+7: {
+&"dampurr": true
+},
+8: {
+&"rainther": true
+},
+9: {
+&"delugar": true
+},
+10: {
+&"hissiorite": true
+},
+11: {
+&"cobarett": true
+},
+12: {
+&"pythonova": true
+},
+13: {
+&"saurky": true
+},
+14: {
+&"crestaka": true
+},
+15: {
+&"avipex": true
+},
+16: {
+&"droopig": true
+},
+17: {
+&"hoolihog": true
+},
+18: {
+&"sligment": true
+},
+19: {
+&"viscolor": true
+},
+20: {
+&"gelescent": true
+},
+21: {
+&"lollybog": true
+},
+22: {
+&"brewtrid": true
+},
+23: {
+&"forbiddron": true
+},
+24: {
+&"plushion": true
+},
+25: {
+&"rocotton": true
+},
+26: {
+&"tuffettry": true
+},
+27: {
+&"kankwart": true
+},
+28: {
+&"kankryst": true
+},
+29: {
+&"kankersaur": true
+},
+30: {
+&"dripwirt": true
+},
+31: {
+&"pourka": true
+},
+32: {
+&"pompet": true
+},
+33: {
+&"pomprim": true
+},
+34: {
+&"skelleks": true
+},
+35: {
+&"negagen": true
+},
+36: {
+&"smoald": true
+},
+37: {
+&"bombustoad": true
+},
+38: {
+&"impurp": true
+},
+39: {
+&"nymfushia": true
+},
+40: {
+&"baoby": true
+},
+41: {
+&"baobaraffe": true
+},
+42: {
+&"mivota": true
+},
+43: {
+&"nuenflu": true
+},
+44: {
+&"umbreeze": true
+},
+45: {
+&"dynabit": true
+},
+46: {
+&"anu": true
+},
+47: {
+&"silennium": true
+},
+48: {
+&"merlicun": true
+},
+49: {
+&"firomenis": true
+},
+50: {
+&"drashimi": true
+},
+51: {
+&"tsushimi": true
+},
+52: {
+&"tobishimi": true
+}
+}
 })

@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("2_bfmqa")
 name = "Forbiddron"
+dex_number = 23
 type_1 = &"dread"
 base_hp = 95
 base_attack = 65

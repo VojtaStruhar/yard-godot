@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("1_script")
 name = "Sligment"
+dex_number = 18
 type_1 = &"water"
 evolutions = Array[ExtResource("3_mrw6o")]([SubResource("Resource_l8e44")])
 base_hp = 50

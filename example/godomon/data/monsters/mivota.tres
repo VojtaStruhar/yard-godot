@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("1_script")
 name = "Mivota"
+dex_number = 42
 type_1 = &"fire"
 type_2 = &"sacred"
 base_hp = 60

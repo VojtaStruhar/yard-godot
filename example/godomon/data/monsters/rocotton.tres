@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_orxl7")
 name = "Rocotton"
+dex_number = 25
 type_1 = &"sacred"
 evolutions = Array[ExtResource("1_426bs")]([SubResource("Resource_swkjd")])
 base_hp = 80

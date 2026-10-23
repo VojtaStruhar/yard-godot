@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("2_ur4jd")
 name = "Firomenis"
+dex_number = 49
 type_1 = &"blight"
 type_2 = &"wind"
 base_hp = 75

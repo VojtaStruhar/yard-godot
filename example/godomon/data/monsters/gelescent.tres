@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("1_script")
 name = "Gelescent"
+dex_number = 20
 type_1 = &"water"
 type_2 = &"sacred"
 base_hp = 85

@@ -17,6 +17,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_scjk3")
 name = "Brewtrid"
+dex_number = 22
 type_1 = &"dread"
 evolutions = Array[ExtResource("1_plgs1")]([SubResource("Resource_33dx8")])
 base_hp = 70

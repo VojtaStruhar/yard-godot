@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("2_0y4x4")
 name = "Pomprim"
+dex_number = 33
 type_1 = &"plant"
 type_2 = &"sacred"
 base_hp = 85

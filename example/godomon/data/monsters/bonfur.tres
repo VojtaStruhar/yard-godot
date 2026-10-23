@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("1_script")
 name = "Bonfur"
+dex_number = 4
 type_1 = &"fire"
 evolutions = Array[ExtResource("3_4myvu")]([SubResource("Resource_22f2m")])
 base_hp = 50

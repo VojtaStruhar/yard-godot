@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_5pmys")
 name = "Lollybog"
+dex_number = 21
 type_1 = &"dread"
 evolutions = Array[ExtResource("1_bs0f4")]([SubResource("Resource_j6ixq")])
 base_hp = 55

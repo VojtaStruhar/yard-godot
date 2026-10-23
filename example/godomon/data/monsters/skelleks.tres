@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("1_script")
 name = "Skelleks"
+dex_number = 34
 type_1 = &"dread"
 type_2 = &"electric"
 evolutions = Array[ExtResource("3_yu0dl")]([SubResource("Resource_kg3bo")])

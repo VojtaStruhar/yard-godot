@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("1_script")
 name = "Timberry"
+dex_number = 1
 type_1 = &"plant"
 evolutions = Array[ExtResource("3_h4ah6")]([SubResource("Resource_2w53f")])
 base_hp = 45

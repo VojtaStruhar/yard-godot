@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("1_script")
 name = "Hoolihog"
+dex_number = 17
 type_2 = &"dread"
 base_hp = 105
 base_attack = 110

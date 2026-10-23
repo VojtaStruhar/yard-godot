@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("2_ydvrq")
 name = "Pythonova"
+dex_number = 12
 type_1 = &"fire"
 base_hp = 80
 base_attack = 112

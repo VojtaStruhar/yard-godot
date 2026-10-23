@@ -8,6 +8,7 @@
 [resource]
 script = ExtResource("2_4gke5")
 name = "Avipex"
+dex_number = 15
 type_1 = &"water"
 type_2 = &"wind"
 base_hp = 79

@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("1_script")
 name = "Pourka"
+dex_number = 31
 type_1 = &"water"
 base_hp = 80
 base_attack = 60

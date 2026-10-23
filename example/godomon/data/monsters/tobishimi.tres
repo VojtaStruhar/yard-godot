@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("2_lmolk")
 name = "Tobishimi"
+dex_number = 52
 type_1 = &"water"
 type_2 = &"primal"
 base_hp = 140

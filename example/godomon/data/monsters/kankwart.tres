@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_vt2tg")
 name = "Kankwart"
+dex_number = 27
 type_1 = &"earth"
 type_2 = &"blight"
 evolutions = Array[ExtResource("1_i7i6q")]([SubResource("Resource_eutci")])

@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("2_766jq")
 name = "Baobaraffe"
+dex_number = 41
 type_1 = &"plant"
 type_2 = &"water"
 base_hp = 115

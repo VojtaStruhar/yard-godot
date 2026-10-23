@@ -136,7 +136,10 @@ const REQUIREMENT_PARAMS := {
 }
 
 ## Species the monster evolves into.
-@export_custom(Registry.PROPERTY_HINT_CUSTOM, MONSTERS) var target_species: StringName
+@export_custom(
+	Registry.PROPERTY_HINT_CUSTOM,
+	MONSTERS + ",sort=dex_number",
+) var target_species: StringName
 
 @export var trigger: Trigger = Trigger.LEVEL_UP:
 	set(value):
@@ -251,7 +254,7 @@ func _to_string() -> String:
 	if context != Context.ANY:
 		parts.append(Context.keys()[context])
 
-	return "(" + ", ".join(parts) + ")"
+	return "%s(%s)" % [get_script().get_global_name(), ", ".join(parts)]
 
 
 ## Builds an enum hint restricted to `allowed`, preserving the underlying values.

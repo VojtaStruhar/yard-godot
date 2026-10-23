@@ -17,6 +17,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_ojn6m")
 name = "Pompet"
+dex_number = 32
 type_1 = &"plant"
 type_2 = &"sacred"
 evolutions = Array[ExtResource("1_5qim8")]([SubResource("Resource_e3k7t")])

@@ -19,6 +19,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_xso5v")
 name = "Merlicun"
+dex_number = 48
 type_1 = &"blight"
 evolutions = Array[ExtResource("1_oi0yv")]([SubResource("Resource_q23kg")])
 base_hp = 75

@@ -12,6 +12,7 @@
 [resource]
 script = ExtResource("2_k55ye")
 name = "Anu"
+dex_number = 46
 type_1 = &"mind"
 type_2 = &"dread"
 base_hp = 60

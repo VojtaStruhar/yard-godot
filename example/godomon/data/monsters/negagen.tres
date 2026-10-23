@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("1_script")
 name = "Negagen"
+dex_number = 35
 type_1 = &"dread"
 type_2 = &"electric"
 base_hp = 65

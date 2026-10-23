@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("2_kvsmt")
 name = "Tuffettry"
+dex_number = 26
 type_1 = &"sacred"
 base_hp = 100
 base_attack = 50

@@ -18,6 +18,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("1_script")
 name = "Droopig"
+dex_number = 16
 evolutions = Array[ExtResource("3_e3k8h")]([SubResource("Resource_kyjbj")])
 base_hp = 75
 base_attack = 55

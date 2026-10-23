@@ -17,6 +17,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("1_script")
 name = "Dripwirt"
+dex_number = 30
 type_1 = &"water"
 evolutions = Array[ExtResource("3_que32")]([SubResource("Resource_uethx")])
 base_hp = 50

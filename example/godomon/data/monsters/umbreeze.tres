@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("1_script")
 name = "Umbreeze"
+dex_number = 44
 type_1 = &"dread"
 type_2 = &"wind"
 base_hp = 55

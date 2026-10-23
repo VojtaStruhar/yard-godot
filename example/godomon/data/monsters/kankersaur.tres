@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("2_0nw7q")
 name = "Kankersaur"
+dex_number = 29
 type_1 = &"earth"
 type_2 = &"blight"
 base_hp = 95

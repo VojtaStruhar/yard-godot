@@ -17,6 +17,7 @@ metadata/_custom_type_script = "uid://dh362naomk3hc"
 [resource]
 script = ExtResource("2_aomiu")
 name = "Plushion"
+dex_number = 24
 type_1 = &"sacred"
 evolutions = Array[ExtResource("1_6bx6c")]([SubResource("Resource_3v88j")])
 base_hp = 65

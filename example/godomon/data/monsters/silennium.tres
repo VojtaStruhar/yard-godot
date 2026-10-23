@@ -10,6 +10,7 @@
 [resource]
 script = ExtResource("1_script")
 name = "Silennium"
+dex_number = 47
 type_1 = &"earth"
 type_2 = &"cosmic"
 base_hp = 90
