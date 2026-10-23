@@ -124,6 +124,10 @@ func _ready() -> void:
 	version_button.text = update_manager.get_current_version()
 	update_manager.request_update_check()
 
+	if Compat.is_engine_version_equal_or_newer(4, 7):
+		columns_menu_button.get_popup().set(&"search_bar_enabled", true)
+		columns_menu_button.get_popup().set(&"search_bar_min_item_count", 35)
+
 	# Fuzzy Search settings
 	_fuz.max_results = 20
 	_fuz.max_misses = 2
@@ -521,7 +525,6 @@ func _populate_open_recent_submenu() -> void:
 func _populate_columns_popup_menu() -> void:
 	var popup := columns_menu_button.get_popup()
 	popup.clear(true)
-	# free_submenus=true, avoids leaking a PopupMenu Node per column per open
 	if not registry_table_view.current_registry:
 		popup.add_separator("Select a registry first")
 		return
@@ -778,7 +781,7 @@ func _on_columns_menu_window_input(event: InputEvent) -> void:
 	if is_left_click or event.is_action_pressed(&"ui_accept"):
 		var popup := columns_menu_button.get_popup()
 		var idx := popup.get_focused_item()
-		if popup.get_item_submenu_node(idx):
+		if idx != -1 and popup.get_item_submenu_node(idx):
 			popup.id_pressed.emit(popup.get_item_id(idx))
 
 
