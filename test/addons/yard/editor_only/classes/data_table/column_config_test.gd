@@ -12,6 +12,7 @@ const StringCellType := Namespace.StringCellType
 const StringNameCellType := Namespace.StringNameCellType
 const MultilineCellType := Namespace.MultilineCellType
 const NumericCellType := Namespace.NumericCellType
+const VectorCellType := Namespace.VectorCellType
 const BooleanCellType := Namespace.BooleanCellType
 const RangeCellType := Namespace.RangeCellType
 const ColorCellType := Namespace.ColorCellType
@@ -93,7 +94,8 @@ func test_get_cell_type_picks_the_most_specific_type() -> void:
 		[_column(TYPE_STRING), StringCellType],
 		[_column(TYPE_INT), NumericCellType],
 		[_column(TYPE_FLOAT), NumericCellType],
-		[_column(TYPE_VECTOR2), CellType],
+		[_column(TYPE_VECTOR2), VectorCellType],
+		[_column(TYPE_VECTOR4I), VectorCellType],
 		[_column(TYPE_OBJECT), CellType],
 	]
 	for expected: Array in expected_cell_types:
