@@ -16,23 +16,7 @@ static func draw_cell(
 	column: ColumnConfig,
 	style: CellStyle,
 ) -> void:
-	var font := resolve_font(column, style.font)
-	var x_margin: int = H_ALIGNMENT_MARGINS.get(HORIZONTAL_ALIGNMENT_LEFT)
-	var remaining_rect := rect
-	for key in _get_selected_labels(value, column):
-		if not remaining_rect.has_area():
-			break
-		var key_width := font.get_string_size(key, HORIZONTAL_ALIGNMENT_LEFT, -1, style.font_size).x
-		draw_text(
-			canvas,
-			remaining_rect,
-			key,
-			font,
-			style.font_size,
-			HORIZONTAL_ALIGNMENT_LEFT,
-			resolve_text_color(column, style, _hashed_color(key)),
-		)
-		remaining_rect = remaining_rect.grow_side(SIDE_LEFT, -(key_width + x_margin * 2))
+	draw_tags(canvas, rect, _get_selected_labels(value, column), column, style)
 
 
 static func get_sort_key(value: Variant, _column: ColumnConfig) -> Variant:

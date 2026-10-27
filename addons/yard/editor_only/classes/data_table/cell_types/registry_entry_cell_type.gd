@@ -61,7 +61,7 @@ static func create_editor(
 	on_finished: Callable,
 ) -> Node:
 	var custom_hint := RegistryIO.CustomHint.parse(column.hint_string)
-	var choices := _get_choices(custom_hint)
+	var choices := get_choices(custom_hint)
 	var allow_custom := custom_hint.suggestion
 	return popup_single_choice(owner, rect, value, column, on_finished, choices, allow_custom)
 
@@ -80,7 +80,7 @@ static func get_tooltip(value: Variant, column: ColumnConfig) -> String:
 
 
 ## The registry's string IDs in dropdown order, each one its own label.
-static func _get_choices(custom_hint: RegistryIO.CustomHint) -> Dictionary:
+static func get_choices(custom_hint: RegistryIO.CustomHint) -> Dictionary:
 	var registry := custom_hint.load_registry()
 	if not registry:
 		return { }

@@ -20,6 +20,7 @@ const PathCellType := Namespace.PathCellType
 const EnumCellType := Namespace.EnumCellType
 const BitFlagsCellType := Namespace.BitFlagsCellType
 const RegistryEntryCellType := Namespace.RegistryEntryCellType
+const OptionArrayCellType := Namespace.OptionArrayCellType
 const CollectionCellType := Namespace.CollectionCellType
 
 # Custom hints have no PropertyHint member.
@@ -82,6 +83,8 @@ func test_get_cell_type_picks_the_most_specific_type() -> void:
 		[_column(TYPE_STRING, PROPERTY_HINT_ENUM, "red,green"), EnumCellType],
 		[_column(TYPE_STRING_NAME, PROPERTY_HINT_ENUM_SUGGESTION, "a,b"), EnumCellType],
 		[_column(TYPE_INT, PROPERTY_HINT_FLAGS, "A,B,C"), BitFlagsCellType],
+		[_column(TYPE_ARRAY, REGISTRY_HINT, "res://registry.tres"), OptionArrayCellType],
+		[_column(TYPE_ARRAY, PROPERTY_HINT_TYPE_STRING, "2/2:Low,High"), OptionArrayCellType],
 		[_column(TYPE_ARRAY), CollectionCellType],
 		[_column(TYPE_PACKED_STRING_ARRAY), CollectionCellType],
 		[_column(TYPE_DICTIONARY), CollectionCellType],

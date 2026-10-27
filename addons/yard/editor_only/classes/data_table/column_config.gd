@@ -22,6 +22,7 @@ const PathCellType := Namespace.PathCellType
 const EnumCellType := Namespace.EnumCellType
 const BitFlagsCellType := Namespace.BitFlagsCellType
 const RegistryEntryCellType := Namespace.RegistryEntryCellType
+const OptionArrayCellType := Namespace.OptionArrayCellType
 const CollectionCellType := Namespace.CollectionCellType
 
 const CELL_TYPES_PRIORITY_LIST: Array[GDScript] = [
@@ -33,6 +34,7 @@ const CELL_TYPES_PRIORITY_LIST: Array[GDScript] = [
 	RegistryEntryCellType,
 	EnumCellType,
 	BitFlagsCellType,
+	OptionArrayCellType,
 	CollectionCellType,
 	MultilineCellType,
 	StringNameCellType,

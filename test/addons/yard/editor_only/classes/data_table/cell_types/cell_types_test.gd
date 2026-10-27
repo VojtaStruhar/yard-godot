@@ -225,7 +225,7 @@ func test_resource_keys() -> void:
 
 func test_registry_entry_choices_follow_the_sort_option() -> void:
 	var custom_hint := RegistryIO.CustomHint.parse("%s,sort=-price" % Fixtures.SHOP_REGISTRY_PATH)
-	assert_array(RegistryEntryCellType._get_choices(custom_hint).keys()).is_equal(
+	assert_array(RegistryEntryCellType.get_choices(custom_hint).keys()).is_equal(
 		["elixir", "sword", "potion"],
 	)
 

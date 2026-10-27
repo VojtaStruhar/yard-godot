@@ -96,6 +96,35 @@ static func popup_multiple_choice(
 	return editor
 
 
+## Draws each label left to right in its own hashed color.
+static func draw_tags(
+	canvas: CanvasItem,
+	rect: Rect2,
+	labels: PackedStringArray,
+	column: ColumnConfig,
+	style: CellStyle,
+) -> void:
+	var font := resolve_font(column, style.font)
+	var x_margin: int = H_ALIGNMENT_MARGINS.get(HORIZONTAL_ALIGNMENT_LEFT)
+	var remaining_rect := rect
+	for label: String in labels:
+		if not remaining_rect.has_area():
+			break
+		var label_width := font \
+				.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, style.font_size) \
+				.x
+		draw_text(
+			canvas,
+			remaining_rect,
+			label,
+			font,
+			style.font_size,
+			HORIZONTAL_ALIGNMENT_LEFT,
+			resolve_text_color(column, style, _hashed_color(label)),
+		)
+		remaining_rect = remaining_rect.grow_side(SIDE_LEFT, -(label_width + x_margin * 2))
+
+
 ## The node DataTable keeps for the edit: it holds the menu, or what replaces it, and the value
 ## being edited. It sits at the owner's origin, so cell rects apply as is inside it.
 static func _create_editor(owner: Control, value: Variant) -> Control:
