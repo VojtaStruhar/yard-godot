@@ -93,7 +93,7 @@ static func read_editor_value(editor: Node, _column: ColumnConfig) -> Variant:
 	var popup_menu: PopupMenu = editor
 	var original: Array = popup_menu.get_meta(&"array")
 	var result := original.duplicate()
-	for idx in popup_menu.item_count:
+	for idx: int in popup_menu.item_count:
 		var element: Variant = popup_menu.get_item_metadata(idx)
 		var checked := popup_menu.is_item_checked(idx)
 		if not popup_menu.is_item_checkable(idx):
@@ -138,7 +138,7 @@ static func _get_options(column: ColumnConfig) -> Dictionary:
 	if _is_enum_array(column):
 		return _get_enum_map(column)
 	var options := { }
-	for string_id in RegistryEntryCellType.get_registry_entries(column.hint_string):
+	for string_id: StringName in RegistryEntryCellType.get_registry_entries(column.hint_string):
 		options[string_id] = str(string_id)
 	return options
 

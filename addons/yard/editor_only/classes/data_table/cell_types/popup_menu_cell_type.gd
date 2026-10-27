@@ -63,7 +63,7 @@ static func draw_tags(
 	var font := resolve_font(column, style.font)
 	var x_margin: int = H_ALIGNMENT_MARGINS.get(HORIZONTAL_ALIGNMENT_LEFT)
 	var remaining_rect := rect
-	for label in labels:
+	for label: String in labels:
 		if not remaining_rect.has_area():
 			break
 		var label_width := font \
