@@ -108,6 +108,9 @@ const BitFlagsCellType := preload(
 const RegistryEntryCellType := preload(
 	"res://addons/yard/editor_only/classes/data_table/cell_types/registry_entry_cell_type.gd"
 )
+const OptionArrayCellType := preload(
+	"res://addons/yard/editor_only/classes/data_table/cell_types/option_array_cell_type.gd"
+)
 const CollectionCellType := preload(
 	"res://addons/yard/editor_only/classes/data_table/cell_types/collection_cell_type.gd"
 )

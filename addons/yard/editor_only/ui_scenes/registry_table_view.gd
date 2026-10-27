@@ -80,6 +80,7 @@ var _uid_resource_to_inspect: String
 var _subresource_to_inspect: Resource
 var _context_column: StringName
 var _resource_label_priority: int
+var _string_id_alignment: HorizontalAlignment
 
 @onready var data_table: DataTable = %DataTable
 @onready var edit_context_menu: PopupMenu = %EditContextMenu
@@ -99,6 +100,7 @@ func _ready() -> void:
 	EditorInterface.get_inspector().property_edited.connect(_on_inspector_property_edited)
 	ProjectSettings.settings_changed.connect(_on_project_settings_changed)
 	_resource_label_priority = YardSettings.get_setting(YardSettings.RESOURCE_LABEL_PRIORITY)
+	_string_id_alignment = YardSettings.get_setting(YardSettings.STRING_ID_ALIGNMENT)
 
 	data_table.cell_selected.connect(_on_cell_selected)
 	data_table.cell_right_selected.connect(_on_cell_right_selected)
@@ -448,7 +450,7 @@ func _build_columns(
 			TYPE_STRING,
 		)
 		string_id_column.custom_font_color = get_theme_color(&"accent_color", &"Editor")
-		string_id_column.h_alignment = HORIZONTAL_ALIGNMENT_RIGHT
+		string_id_column.h_alignment = _string_id_alignment
 		string_id_column.frozen = is_column_frozen(STRINGID_COLUMN)
 		columns.append(string_id_column)
 
@@ -1095,9 +1097,11 @@ func _on_inspector_property_edited(_property: StringName) -> void:
 
 func _on_project_settings_changed() -> void:
 	var priority: int = YardSettings.get_setting(YardSettings.RESOURCE_LABEL_PRIORITY)
-	if priority == _resource_label_priority:
+	var alignment: HorizontalAlignment = YardSettings.get_setting(YardSettings.STRING_ID_ALIGNMENT)
+	if priority == _resource_label_priority and alignment == _string_id_alignment:
 		return
 	_resource_label_priority = priority
+	_string_id_alignment = alignment
 	update_view()
 
 

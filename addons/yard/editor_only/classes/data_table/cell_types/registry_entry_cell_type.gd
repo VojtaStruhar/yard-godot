@@ -61,7 +61,7 @@ static func create_editor(
 	on_finished: Callable,
 ) -> Node:
 	var popup_menu := PopupMenu.new()
-	for entry: StringName in _get_registry_entries(column.hint_string):
+	for entry: StringName in get_registry_entries(column.hint_string):
 		var str_entry := str(entry)
 		popup_menu.add_radio_check_item(str_entry)
 		popup_menu.set_item_metadata(popup_menu.item_count - 1, str_entry)
@@ -98,7 +98,7 @@ static func _get_registry(hint_string: String) -> Registry:
 	return registry
 
 
-static func _get_registry_entries(hint_string: String) -> Array[StringName]:
+static func get_registry_entries(hint_string: String) -> Array[StringName]:
 	var registry := _get_registry(hint_string)
 	if not registry:
 		return []

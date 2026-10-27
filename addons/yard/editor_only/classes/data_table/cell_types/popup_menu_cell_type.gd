@@ -52,6 +52,35 @@ static func popup_multiple_choice(
 	return _popup_under_cell(popup_menu, owner, rect, on_finished.bind(true))
 
 
+## Draws each label left to right in its own hashed color.
+static func draw_tags(
+	canvas: CanvasItem,
+	rect: Rect2,
+	labels: Array[String],
+	column: ColumnConfig,
+	style: CellStyle,
+) -> void:
+	var font := resolve_font(column, style.font)
+	var x_margin: int = H_ALIGNMENT_MARGINS.get(HORIZONTAL_ALIGNMENT_LEFT)
+	var remaining_rect := rect
+	for label in labels:
+		if not remaining_rect.has_area():
+			break
+		var label_width := font \
+				.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, style.font_size) \
+				.x
+		draw_text(
+			canvas,
+			remaining_rect,
+			label,
+			font,
+			style.font_size,
+			HORIZONTAL_ALIGNMENT_LEFT,
+			resolve_text_color(column, style, _hashed_color(label)),
+		)
+		remaining_rect = remaining_rect.grow_side(SIDE_LEFT, -(label_width + x_margin * 2))
+
+
 static func _popup_under_cell(
 	popup_menu: PopupMenu,
 	owner: Control,

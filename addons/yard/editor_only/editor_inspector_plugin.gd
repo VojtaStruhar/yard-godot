@@ -39,8 +39,8 @@ func _parse_property(
 	if not registry is Registry:
 		return false
 
-	var show_empty: bool = parts.size() > 1 and parts[1] == "true" # when unspecified: false
-	var allow_duplicates: bool = parts.size() <= 2 or parts[2] != "false" # when unspecified: true
+	var show_empty: bool = parsed_hint.show_empty
+	var allow_duplicates: bool = parsed_hint.allow_duplicates
 
 	var string_ids: Array[String] = []
 	for id in RegistryIO.get_string_ids_sorted_by(registry, parsed_hint.sort):

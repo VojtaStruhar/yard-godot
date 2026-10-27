@@ -321,7 +321,8 @@ static func rebuild_property_index(registry: Registry) -> Error:
 ## Splits a [constant Registry.PROPERTY_HINT_CUSTOM] hint string into its positional values
 ## and its named [code]key=value[/code] options.[br][br]
 ##
-## Returns [code]{ "positional": PackedStringArray, "sort": String }[/code].
+## Returns [code]{ "positional": PackedStringArray, "show_empty": bool, "allow_duplicates": bool,
+## "sort": String }[/code].
 static func parse_custom_hint(hint_string: String) -> Dictionary:
 	var positional := PackedStringArray()
 	var sort_spec := ""
@@ -336,7 +337,12 @@ static func parse_custom_hint(hint_string: String) -> Dictionary:
 			sort_spec = token.substr(separator + 1).strip_edges()
 		else:
 			YardLogger.warn("Unknown option '%s' in hint string \"%s\"." % [key, hint_string])
-	return { "positional": positional, "sort": sort_spec }
+	return {
+		"positional": positional,
+		"show_empty": positional.size() > 1 and positional[1] == "true", # when unspecified: false
+		"allow_duplicates": positional.size() <= 2 or positional[2] != "false", # when unspecified: true
+		"sort": sort_spec,
+	}
 
 
 ## Returns the string IDs of [param registry] ordered by the value of an indexed property.[br][br]

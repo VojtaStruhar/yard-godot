@@ -11,6 +11,7 @@ extends Object
 
 const UPDATE_CHANNEL := "yard/updates/channel"
 const RESOURCE_LABEL_PRIORITY := "yard/table/resource_label_priority"
+const STRING_ID_ALIGNMENT := "yard/table/string_id_alignment"
 
 enum ResourceLabelPriority {
 	RESOURCE_NAME_FIRST,
@@ -31,6 +32,13 @@ const SETTINGS: Array[Dictionary] = [
 		"default": ResourceLabelPriority.RESOURCE_NAME_FIRST,
 		"hint": PROPERTY_HINT_ENUM,
 		"hint_string": "resource_name > _to_string(),_to_string() > resource_name",
+	},
+	{
+		"name": STRING_ID_ALIGNMENT,
+		"type": TYPE_INT,
+		"default": HORIZONTAL_ALIGNMENT_RIGHT,
+		"hint": PROPERTY_HINT_ENUM,
+		"hint_string": "Left,Center,Right", # Same order as HorizontalAlignment.
 	},
 ]
 
