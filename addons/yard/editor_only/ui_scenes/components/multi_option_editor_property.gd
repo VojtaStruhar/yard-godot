@@ -139,6 +139,20 @@ func _build_row(index: int) -> void:
 	var vbox: VBoxContainer = dropdown_container.get_child(0)
 	var row: HBoxContainer = HBoxContainer.new()
 
+	# Same handle as the engine's array inspector: hold it and drag the row up or down.
+	var handle := Button.new()
+	handle.flat = true
+	handle.icon = get_theme_icon(
+		&"DragHandle" if Compat.is_engine_version_equal_or_newer(4, 8) else &"TripleBar",
+		&"EditorIcons",
+	)
+	handle.tooltip_text = "Drag to Reorder"
+	handle.focus_mode = Control.FOCUS_NONE
+	handle.mouse_default_cursor_shape = Control.CURSOR_MOVE
+	handle.gui_input.connect(_on_handle_gui_input.bind(row))
+	handle.button_up.connect(_on_handle_released.bind(index, row))
+	row.add_child(handle)
+
 	var idx_label := Label.new()
 	idx_label.text = str(index)
 	idx_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
@@ -198,6 +212,27 @@ func _build_row(index: int) -> void:
 	row.add_child(option_button)
 	row.add_child(remove)
 	vbox.add_child(row)
+
+
+## While the handle is held, moves its row to the slot under the mouse.
+func _on_handle_gui_input(event: InputEvent, row: HBoxContainer) -> void:
+	var motion := event as InputEventMouseMotion
+	if not motion or not (motion.button_mask & MOUSE_BUTTON_MASK_LEFT):
+		return
+	var vbox: VBoxContainer = row.get_parent()
+	var row_pitch := row.size.y + vbox.get_theme_constant(&"separation")
+	var target := floori(vbox.get_local_mouse_position().y / row_pitch)
+	vbox.move_child(row, clampi(target, 0, selected_options.size() - 1))
+
+
+## Applies the move once the handle is released over a different slot.
+func _on_handle_released(from: int, row: HBoxContainer) -> void:
+	var to := row.get_index()
+	if to == from:
+		return
+	selected_options.insert(to, selected_options.pop_at(from))
+	_emit_changed()
+	call_deferred(&"_refresh")
 
 
 ## Emits the updated list of selected options to the inspector.
